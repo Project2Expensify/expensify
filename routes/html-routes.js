@@ -1,7 +1,8 @@
 const router = require("express").Router();
-const homeController = require("../controllers/home-controller.js")
+const dashboardContoller = require("../controllers/dashboard-controller.js")
 
-router.get("/", homeController.showHomePage);
+router.get("/dashboard", dashboardContoller.showExpenses);
+
 
 
 module.exports = router;
