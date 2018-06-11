@@ -5,3 +5,4 @@ exports.showHomePage = function(req, res) {
 
   res.render("index", handlebarsObj);
 };
+
