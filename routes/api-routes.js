@@ -10,11 +10,12 @@ var userController = require("../controllers/user-controller")
 // create/save a new user
 router.post("/users", userController.create) 
 
+
+// this routes was made for testing 
 // in the future update this route to be a protected route so user cant change categories
 router.post("/categories", function(req, res){ // /api is prefixed in server.js file
-  category.create({ name: "Food" }).then(function(cat) {
-    console.log(cat);
-    res.send(cat)
+  category.bulkCreate([{name: "food"}, {name: "gas"}, {name: "retail"}, {name: "gifts"}]).then(function(cats) {
+    res.send(cats)
   });
 })
 
@@ -35,29 +36,33 @@ router.get("/expenses", function(req, res){
   })
 })
 
+
+
 // DELETE route for deleting expense
 router.delete("/expenses/:id", function(req, res){
   expense.destroy({
     where: {
       id: req.params.id
     }
-  }).then(function(dbExpensify){
-    res.json(dbExpensify)
+  }).then(function(expenses){
+    res.json(expenses)
   })
 })
 
 
 // PUT route for updating expense
-router.put("/api/expenses", function(req, res) {
+router.put("/expenses/:id", function(req, res) {
   expense.update(req.body,
     {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     })
-    .then(function(dbExpensify) {
-      res.json(dbExpensify);
-    });
+    .then(function(expenses) {
+      res.json(expenses);
+    }).catch(function(error){
+      res.send(error.message)
+    })
 });
 
 
