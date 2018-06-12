@@ -1,1 +1,25 @@
-{{!-- {{#each categories}} --}}
+{{!-- testing --}}
+<div id="expenses">
+      <div id ="allExpenses">
+        <ol>
+          {{#each expenses}}
+            <div class="expensesList">
+              <li>
+                <h3>{{description}}</h3>
+              </li>
+            </div> 
+          {{/each}}
+          </ol>
+      </div>
+
+
+<form action="http://localhost:8080/api/expenses" method="POST"> 
+  <input type="text" name= "description">
+  <input type="text" name= "amount">
+  <select name="category_id">
+    {{#each categories}}
+      <option value="{{id}}" >{{name}}</option>
+    {{/each}}
+  </select>
+  <button type="submit">submit</button>
+</form>
