@@ -26,7 +26,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.form button, .form-group button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -88,7 +88,7 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
-body {
+body, {
   background: lightskyblue; /* fallback for old browsers */
   background: -webkit-linear-gradient(right, lightskyblue, lightblue);
   background: -moz-linear-gradient(right, lightskyblue, lightblue);
