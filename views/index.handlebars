@@ -2,15 +2,17 @@
 <div id="expenses">
       <div id ="allExpenses">
         <ol>
-          {{#each expenses}}
+          {{#each users}}
             <div class="expensesList">
               <li>
-                <h3>{{description}}</h3>
+                <h3>{{first_name}}</h3>
               </li>
             </div> 
           {{/each}}
           </ol>
       </div>
+
+{{first_name}}
 
 
 <form action="http://localhost:8080/api/expenses" method="POST"> 

@@ -12,6 +12,9 @@ $(function(){
     var lastName = lastNameInput.val()
     var budget = budgetInput.val()
 
+    console.log(firstName, lastName, budget)
+
+  // create new user
   $.ajax({
     url: /api/users,
     method: 'POST',
@@ -20,16 +23,12 @@ $(function(){
       last_name: lastName,
       budget: budget,
     }
-  }).then(function(data){
-    $.ajax({
-      url: /api/users,
-      method: 'POST',
-      data: {
-        first_name: firstName,
-        last_name: lastName,
-        budget: budget,
-      }
-  })
+  }).then(function(data){ //redirect to users dashboard
+  //   $.ajax({
+  //     url: /dashboard,
+  //     method: 'GET',
+  //     data: {}
+  // })
 
 
 
@@ -62,4 +61,3 @@ $(function(){
 
 
 })
-
