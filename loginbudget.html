@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- CSS Link -->
+  <link rel = 'stylesheet' href = "public/assets/html.css">
+
+</head>
+<body>
+  
+<!-- Jumbotron Title-->
+<div class="jumbotron">
+  <center>
+  <h1 class="display-4">Expensify</h1>
+     <br>
+     <br>
+     <p class="lead">Please enter your first and last name along with your monthly budget</p>
+     <hr class="my-4">
+
+<!-- Login form -->
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="number" placeholder="budget"/>
+      <button>create</button>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="First and Last name" required/>
+      <input type="number" placeholder="budget" required/>
+      <button>Let's Expensify!</button>
+    </form>
+  </div>
+ 
+
+
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="container"> 
+    <hr>
+    <!--Input custom links here -->
+   <a href = "linkhere.com">Database</a> ||
+   <a href = "https://github.com"> Git Hub Repo</a>
+  </div>
+  </footer>
+</div>
+
+
+
+
+<script>
+//Code for button animation
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</body>
+</html>
