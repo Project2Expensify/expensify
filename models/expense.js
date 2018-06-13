@@ -22,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
     amount: {
       type: DataTypes.FLOAT,
       allowNull: false
+    },
+    date: {
+      type: DataTypes.DATEONLY,
+      allowNull: false
     }
   }, {});
   Expense.associate = function(models) {

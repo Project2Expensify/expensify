@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+<!--  jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Boostrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<!--CSS Link -->
+<link rel = 'stylesheet' href = "public/assets/html.css">
+
+</head>
+<body>
+
+
+<div class="bootstrap-iso">
+  <div class="container-fluid">
+    <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+       
+<!-- Form code begins -->
+<form method="post">
+  <div class="form-group"> <!-- Date input -->
+    <label class="control-label" for="date">Date</label>
+      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+  </div>
+
+<!-- Catergory Input (will be Dropdown/radio)-->
+<div class="form-group">
+  <label for="category">Category</label>
+    <input type="radio" class="form-control" id="category">
+</div>
+<!-- Description Input -->
+<div class="form-group">
+  <label for="description">Description</label>
+    <input type="text" class="form-control" id="description">
+</div>
+<!-- Amount input -->
+<div class="form-group">
+  <label for="amount">Amount</label>
+    <input type="text" class="form-control" id="amount">
+</div>
+<!-- Submit button -->             
+<div class="form-group"> 
+  <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+</div>
+</form>
+<!-- Form code ends --> 
+       
+  </div>
+  </div>    
+ </div>
+</div>
+
+
+
+<script>
+//Code for date picker
+$(document).ready(function(){
+  var date_input=$('input[name="date"]'); //our date input has the name "date"
+  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+  var options={
+      format: 'mm/dd/yyyy',
+      container: container,
+      todayHighlight: true,
+      autoclose: true,
+  };
+      date_input.datepicker(options);
+      })
+      </script>
+  
+</body>
+</html>
