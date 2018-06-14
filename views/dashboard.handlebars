@@ -23,33 +23,9 @@
 <!-- Jumbotron Title-->
 <div class="jumbotron">
   <center>
-  <h1 class="display-4">Expensify!</h1>
+  <h1 class="display-4">Expensify Dashboard</h1>
      <br>
-     <br>
-     <a href="/loginuser">Sign In</a>
-     <p class="lead">Please enter your user name along with your monthly budget</p>
-     <hr class="my-4">
-
-<div class="login-page">
-{{#if login}}
-     <div class="form">
-       <form class="login-form" onsubmit="return false">
-        <input id="userName" type="text" placeholder="User name" required/>
-        <button id="login">Login To Expensify!</button>
-      </form>
-    </div>
- {{else}}
-  <!-- Create form -->
-    <div class="form">
-       <form class="login-form" onsubmit="return false">
-        <input id="userName" type="text" placeholder="User name" required/>
-        <input id="budget" type="number" placeholder="Budget" required/>
-        <button id="create">Let's Expensify!</button>
-      </form>
-    </div>
    
- {{/if}}
-</div>
 
  <!-- Footer -->
  <footer class="footer">
@@ -60,6 +36,13 @@
    <a href = "https://github.com"> Git Hub Repo</a>
   </div>
   </footer>
+
+<h3>
+Dashboard Content
+</h3>
+
+
+
 <script>
 //Code for button animation
 $('.message a').click(function(){

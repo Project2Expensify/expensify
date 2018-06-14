@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
+const seeder = require("./seeders/20180612211210-our-seed-file");
 const app = express();
+
 
 const db = require("./models");
 const htmlRoutes = require("./routes/html-routes");
