@@ -6,3 +6,4 @@ exports.create = function(req, res){ ///api is prefixed in server.js file
     res.json({user})
   })
 }
+
