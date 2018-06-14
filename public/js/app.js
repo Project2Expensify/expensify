@@ -1,39 +1,6 @@
 $(function(){
 
-  $('#login').on('click', function(event){
-    event.preventDefault();
-
-    //grab user login inputs
-    var firstNameInput = $('#firstName')
-    var lastNameInput = $('lastName')
-    var budgetInput = $('budget')
-
-    var firstName = firstNameInput.val()
-    var lastName = lastNameInput.val()
-    var budget = budgetInput.val()
-
-    console.log(firstName, lastName, budget)
-
-  // create new user
-  $.ajax({
-    url: /api/users,
-    method: 'POST',
-    data: {
-      first_name: firstName,
-      last_name: lastName,
-      budget: budget,
-    }
-  }).then(function(data){ //redirect to users dashboard
-  //   $.ajax({
-  //     url: /dashboard,
-  //     method: 'GET',
-  //     data: {}
-  // })
-
-
-
-
-  })
+  
 
   //Pie chart
     var myConfig = {
@@ -60,4 +27,4 @@ $(function(){
 
 
 
-})
+});
