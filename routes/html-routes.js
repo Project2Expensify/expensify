@@ -22,7 +22,7 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.get("/loginbudget", function(req, res) {
-    res.sendFile(path.join(__dirname, "../expensify/loginbudget.html"));
+    res.sendFile(path.join(__dirname, "../expensify/forminput.html"));
   });
 
   app.get("/forminput", function(req, res) {
@@ -31,7 +31,7 @@ module.exports = function(app) {
 
   app.get("/frontpage", function(req, res) {
   	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
-  }
+  };
 
   // If no matching route is found default to home
   app.get("*", function(req, res) {
