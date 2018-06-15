@@ -3,6 +3,7 @@ var categories = require("../models").Category
 var users = require("../models").User
 
 
+
 exports.userDashboard = function(req, res) {
   const currentUser = req.params.username;
   const alreadyExists = req.query.error;
@@ -25,7 +26,18 @@ exports.userDashboard = function(req, res) {
 
 };
 
+
 exports.showExpenses = function(req, res) {
+
+
+  const allExpenses = expenses.findAll();
+  const allCategories = categories.findAll();
+
+  const promise = Promise.all([allExpenses, allCategories]); // resolve findAll promises at the time
+
+  promise.then(function(response) {
+    const handlebarsObj = { expenses: response[0], categories: response[1] }
+    res.render("index", handlebarsObj)
 
   console.log("showing expenses for user: ");
   console.log(req.query.user_id);
