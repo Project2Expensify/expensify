@@ -15,6 +15,7 @@ var path = require("path");
 // ROUTING
 // ===============================================================================
 
+
 module.exports = function(app) {
   // HTML GET Requests
   // Below code handles when users "visit" a page.
@@ -38,5 +39,42 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../expensify/loginbudget.html"));
   });
 };
+
+// This one creates a user
+router.get("/createuser", function(req, res) {
+	var hbsObject = {
+		login: false
+	};
+	res.render("../views/loginbudget", hbsObject);
+});
+
+router.get("/loginuser", function(req, res) {
+	var hbsObject = {
+		login: true
+	};
+	res.render("../views/loginbudget", hbsObject);
+});
+
+router.get("/forminput", function(req, res) {
+	res.sendFile(path.join(__dirname, "../forminput.html"));
+});
+
+router.get("/", function(req, res) {
+	res.sendFile(path.join(__dirname, "../frontpage.html"))
+});
+
+router.get("/frontpage", function(req, res) {
+	res.sendFile(path.join(__dirname, "../frontpage.html"))
+});
+
+// If no matching route is found default to home
+router.get("*", function(req, res) {
+	//res.sendFile(path.join(__dirname, "../loginbudget.html"));
+	var hbsObject = {	 
+	};
+
+	res.render("../views/loginbudget", hbsObject);
+});
+
 
 module.exports = router;

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <!-- CSS Link -->
+  <link rel = 'stylesheet' href = "public/assets/html.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  
+<!-- Jumbotron Title-->
+<div class="jumbotron">
+  <center>
+  <h1 class="display-4">Expensify!</h1>
+     <br>
+     <br>
+     <a href="/loginuser">Sign In</a>
+     <p class="lead">Please enter your user name along with your monthly budget</p>
+     <hr class="my-4">
+
+<div class="login-page">
+{{#if login}}
+     <div class="form">
+       <form class="login-form" onsubmit="return false">
+        <input id="userName" type="text" placeholder="User name" required/>
+        <button id="login">Login To Expensify!</button>
+      </form>
+    </div>
+ {{else}}
+  <!-- Create form -->
+    <div class="form">
+       <form class="login-form" onsubmit="return false">
+        <input id="userName" type="text" placeholder="User name" required/>
+        <input id="budget" type="number" placeholder="Budget" required/>
+        <button id="create">Let's Expensify!</button>
+      </form>
+    </div>
+   
+ {{/if}}
+</div>
+
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="container"> 
+    <hr>
+    <!--Input custom links here -->
+   <a href = "linkhere.com">Database</a> ||
+   <a href = "https://github.com"> Git Hub Repo</a>
+  </div>
+  </footer>
+<script>
+//Code for button animation
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,7 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars");
+const seeder = require("./seeders/20180612211210-our-seed-file");
 const app = express();
+
 
 const db = require("./models");
 const htmlRoutes = require("./routes/html-routes");
@@ -27,7 +29,7 @@ app.use("/api", apiRoutes);
 
 const PORT = process.env.PORT || 8080;
 
-db.sequelize.sync({force: true}).then(function(){
+db.sequelize.sync({force: false}).then(function(){
   app.listen(PORT, function() {
     console.log(`Listening on port: ${PORT}`);
   })
