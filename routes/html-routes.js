@@ -1,9 +1,17 @@
 const router = require("express").Router();
-const dashboardContoller = require("../controllers/dashboard-controller.js")
+const dashboardContoller = require("../controllers/dashboard-controller.js");
+const userController = require("../controllers/user-controller.js");
+
+
+
+router.post("/register", userController.signup);
+router.post("/signin", userController.signIn);
+router.get("/dashboard", dashboardContoller.userDashboard);
+router.get("/dashboard/:username", dashboardContoller.userDashboard);
 
 router.get("/dashboard", dashboardContoller.showExpenses);
-/////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
+
+
 
 // DEPENDENCIES
 // We need to include the path package to get the correct file path for our html

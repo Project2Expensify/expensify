@@ -1,5 +1,8 @@
 $(function(){
 
+
+  
+
   $('#login').on('click', function(event){
       //grab user login inputs
     var userNameInput = $('#userName');
@@ -78,6 +81,13 @@ $(function(){
       height: 400, 
       width: "100%" 
     });
+
+
+
+
+
+});
     */
 })
 })
+

@@ -30,6 +30,21 @@
      <p class="lead">Please enter your user name along with your monthly budget</p>
      <hr class="my-4">
 
+
+<!-- Register form -->
+<div class="login-page">
+  {{#if error}}
+    <h1>{{error}}</h1>
+  {{/if}}
+  <div class="form">
+    <form class="signup" action="http://localhost:8080/register" method="POST">
+      <input id="userName" type="text" placeholder="Username" name="user_name" required/>
+      <input id="budget" type="number" placeholder="Budget" name="budget" required/>
+      <button id="signup">Let's Expensify!</button>
+    </form>
+  </div>
+ 
+
 <div class="login-page">
 {{#if login}}
      <div class="form">
@@ -50,6 +65,7 @@
    
  {{/if}}
 </div>
+
 
  <!-- Footer -->
  <footer class="footer">
