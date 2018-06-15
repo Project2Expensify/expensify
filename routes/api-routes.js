@@ -33,7 +33,7 @@ router.post("/expenses", function(req, res){ // /api is prefixed in server.js fi
 
 
 // this route is for front end to call expense api. NOTE: update to find specific user's expenses  
-router.get("/expenses", function(req, res){
+router.get("/expenses/:user_name", function(req, res){
   expense.findAll().then(function(expenses){
     res.send(expenses) //sends an array of expenses
   })
