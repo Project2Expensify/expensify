@@ -16,6 +16,7 @@ exports.create = function(req, res){ ///api is prefixed in server.js file
   });
 }
 
+
 // FRONTEND METHOD - used for handling behavior such as redirecting
 exports.signup = function(req, res) {
   user.findOrCreate({ 
@@ -46,3 +47,20 @@ exports.signIn = function(req, res) {
     res.send(error.message);
   });
 }
+
+exports.login = function(req, res){ ///api is prefixed in server.js file
+  var uName = req.body.user_name;
+  console.log("login world!!!!", uName); 
+  user.findOne({ where: {user_name: uName} }).then(function(user) {
+  	if (user) {
+	  	var user = user.dataValues;
+	  	console.log(user);
+	  	 res.json({user});
+	}
+	else {
+		res.json({error: "User not found."})
+	}
+  })
+}
+
+
