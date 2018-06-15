@@ -8,9 +8,11 @@ var userController = require("../controllers/user-controller")
 
 
 // create/save a new user
+
 router.post("/create/user", userController.create) ;
 
 router.post("/login/user", userController.login);
+
 
 // this routes was made for testing 
 // in the future update this route to be a protected route so user cant change categories

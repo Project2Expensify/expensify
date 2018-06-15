@@ -6,6 +6,7 @@ exports.create = function(req, res){ ///api is prefixed in server.js file
     res.json({user})
   })
 }
+}
 
 exports.login = function(req, res){ ///api is prefixed in server.js file
   var uName = req.body.user_name;
@@ -21,4 +22,3 @@ exports.login = function(req, res){ ///api is prefixed in server.js file
 	}
   })
 }
-
