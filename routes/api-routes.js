@@ -26,10 +26,17 @@ router.post("/categories", function(req, res){ // /api is prefixed in server.js 
   });
 })
 
+router.get("/categories", function(req, res){ // /api is prefixed in server.js file
+  category.findOne({ where: { id: req.query.id }}).then(function(cat) {
+    res.send(cat)
+  })
+})
+
 // create/send back expense that user created
 router.post("/expenses", function(req, res){ // /api is prefixed in server.js file
+  console.log(req.body)
   expense.create(req.body).then(function(exp){
-    res.json({exp})
+    res.send(exp)
   }).catch(function(err) {
     res.json({error: true, message: err.message})
   })
@@ -37,7 +44,7 @@ router.post("/expenses", function(req, res){ // /api is prefixed in server.js fi
 
 
 // this route is for front end to call expense api. NOTE: update to find specific user's expenses  
-router.get("/expenses", function(req, res){
+router.get("/expenses/:user_id", function(req, res){
   expense.findAll().then(function(expenses){
     res.send(expenses) //sends an array of expenses
   })

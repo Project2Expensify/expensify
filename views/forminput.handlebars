@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 <!--CSS Link -->
-<link rel = 'stylesheet' href = "public/assets/html.css">
+<link rel = 'stylesheet' href = "/assets/html.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
@@ -62,7 +62,7 @@ crossorigin="anonymous">
     <div class="col-md-6 col-sm-6 col-xs-12">
        
 <!-- Form code begins -->
-<form method="post">
+<form method="POST">
   <div class="form-group"> <!-- Date input -->
     <label class="control-label" for="date">Date</label>
       <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
@@ -71,7 +71,13 @@ crossorigin="anonymous">
 <!-- Catergory Input (will be Dropdown/radio)-->
 <div class="form-group">
   <label for="category">Category</label>
-    <input type="radio" class="form-control" id="category">
+  <div class="form-group">
+    <select class="form-control" id="category" placeholder="select">
+      {{#each categories}}
+        <option value="{{id}}">{{name}}</option>
+      {{/each}}
+    </select>
+  </div>
 </div>
 <!-- Description Input -->
 <div class="form-group">
@@ -85,9 +91,10 @@ crossorigin="anonymous">
 </div>
 <!-- Submit button -->             
 <div class="form-group"> 
-  <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+  <button class="btn btn-primary" id="submitExpense" name="submit" type="submit">Submit</button>
 </div>
 </form>
+
 <!-- Form code ends --> 
        
   </div>
@@ -95,6 +102,30 @@ crossorigin="anonymous">
  </div>
 </div>
 
+
+<!--submitted expenses table -->
+<div class="row-fluid col-lg-8 mx-auto">
+  <table class="mx-auto table">
+      <thead id="expenseTable">
+          <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Category</th>
+          <th>Amount</th>
+          </tr>
+      </thead>
+      <tbody id= "tableBody">
+          {{#each expenses}}
+            <tr>
+              <th>{{date}}</th>
+              <th>{{description}}</th>
+              <th>{{category_id}}</th>
+              <th>{{amount}}</th>
+            </tr>
+          {{/each}}
+      </tbody>
+  </table>
+</div>
 
 
 <script>
@@ -111,6 +142,8 @@ $(document).ready(function(){
       date_input.datepicker(options);
       })
       </script>
+
+<script src="/js/app.js"></script>     
   
 </body>
 </html>

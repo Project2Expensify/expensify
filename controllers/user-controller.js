@@ -48,6 +48,7 @@ exports.signIn = function(req, res) {
   });
 }
 
+
 exports.login = function(req, res){ ///api is prefixed in server.js file
   var uName = req.body.user_name;
   console.log("login world!!!!", uName); 
