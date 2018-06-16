@@ -18,8 +18,6 @@ $(function(){
       }
     }).done(function(data){ //redirect to users dashboard
       if (data.user) {
-        //alert("User found");
-        // redirect to dashboard
         window.location.href = "dashboard?user_id=" + data.user.id;
       }
       else {
@@ -48,16 +46,14 @@ $(function(){
         budget: budget
       }
     }).done(function(data){ //redirect to users dashboard
-      var user = data.user;
-      var userId = user.id;
-
-      console.log(data);
-  //   $.ajax({
-  //     url: /dashboard,
-  //     method: 'GET',
-  //     data: {}
-  // })
-
+      var user = data[0];
+      var success = data[1];
+      if (user) {
+        window.location.href = "dashboard?user_id=" + user.id;
+      }
+      else {
+        alert("Error creating user...");
+      }
   })
 
   //Pie chart

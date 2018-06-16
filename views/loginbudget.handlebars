@@ -23,30 +23,16 @@
 <!-- Jumbotron Title-->
 <div class="jumbotron">
   <center>
-  <h1 class="display-4">Expensify!</h1>
+  <h1 class="display-4">Expensify!!</h1>
      <br>
      <br>
      <a href="/loginuser">Sign In</a>
      <p class="lead">Please enter your user name along with your monthly budget</p>
      <hr class="my-4">
 
-
-<!-- Register form -->
-<div class="login-page">
-  {{#if error}}
-    <h1>{{error}}</h1>
-  {{/if}}
-  <div class="form">
-    <form class="signup" action="http://localhost:8080/register" method="POST">
-      <input id="userName" type="text" placeholder="Username" name="user_name" required/>
-      <input id="budget" type="number" placeholder="Budget" name="budget" required/>
-      <button id="signup">Let's Expensify!</button>
-    </form>
-  </div>
- 
-
 <div class="login-page">
 {{#if login}}
+     <!-- Sign in form -->
      <div class="form">
        <form class="login-form" onsubmit="return false">
         <input id="userName" type="text" placeholder="User name" required/>
@@ -54,12 +40,12 @@
       </form>
     </div>
  {{else}}
-  <!-- Create form -->
+  <!-- Register form -->
     <div class="form">
        <form class="login-form" onsubmit="return false">
         <input id="userName" type="text" placeholder="User name" required/>
         <input id="budget" type="number" placeholder="Budget" required/>
-        <button id="create">Let's Expensify!</button>
+        <button id="create">Let's Expensify!!</button>
       </form>
     </div>
    

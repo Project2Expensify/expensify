@@ -7,10 +7,8 @@ const userController = require("../controllers/user-controller.js");
 router.post("/register", userController.signup);
 router.post("/signin", userController.signIn);
 router.get("/dashboard", dashboardContoller.userDashboard);
-router.get("/dashboard/:username", dashboardContoller.userDashboard);
-
-router.get("/dashboard", dashboardContoller.showExpenses);
-
+// router.get("/dashboard", dashboardContoller.showExpenses);
+router.get("/forminput", dashboardContoller.showForm);
 
 
 // DEPENDENCIES
@@ -40,7 +38,7 @@ module.exports = function(app) {
 
   app.get("/frontpage", function(req, res) {
   	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
-  }
+  })
 
   // If no matching route is found default to home
   app.get("*", function(req, res) {

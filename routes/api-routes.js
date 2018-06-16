@@ -5,6 +5,8 @@ const router = require("express").Router();
 var category = require("../models").Category;
 var expense = require("../models").Expense;
 var userController = require("../controllers/user-controller")
+const dashboardContoller = require("../controllers/dashboard-controller");
+
 
 
 // create/save a new user
@@ -12,6 +14,8 @@ var userController = require("../controllers/user-controller")
 router.post("/create/user", userController.create) ;
 
 router.post("/login/user", userController.login);
+
+router.post("/create/expense", dashboardContoller.createExpense);
 
 
 // this routes was made for testing 
