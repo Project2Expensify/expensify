@@ -32,10 +32,13 @@ exports.showExpenses = function(req,res){
   const allExpenses = expenses.findAll();
   const allCategories = categories.findAll();
 
+  console.log(allCategories)
+
   const promise = Promise.all([allExpenses, allCategories]); // resolve findAll promises at the time
 
   promise.then(function(response) {
     const handlebarsObj = { expenses: response[0], categories: response[1] }
+    console.log("handlebar object:" + handlebarsObj)
     res.render("forminput", handlebarsObj)
   });
 }

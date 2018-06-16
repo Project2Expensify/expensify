@@ -98,6 +98,12 @@ $(function() {
 
     $.when( categoryPromise, expensePromise ).then( function( categoryResponse, expenseResponse ) {
       $("#tableBody").append("<tr><td>" + expenseResponse[0].date + "</td><td>" + expenseResponse[0].description + "</td><td>" + categoryResponse[0].name + "</td><td>"  + expenseResponse[0].amount);
+
+      dateInput.val("");
+      categoryInput.val("")
+      descriptionInput.val("")
+      amountInput.val("") 
+
     });
 
     // //send form data

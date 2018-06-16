@@ -8,7 +8,6 @@ router.post("/register", userController.signup);
 router.post("/signin", userController.signIn);
 router.get("/dashboard", dashboardContoller.userDashboard);
 router.get("/dashboard/:username", dashboardContoller.userDashboard);
-
 router.get("/forminput", dashboardContoller.showExpenses);
 
 
