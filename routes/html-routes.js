@@ -43,9 +43,9 @@ router.get("/forminput", dashboardContoller.showExpenses);
 //   });
 
 
-  app.get("/frontpage", function(req, res) {
-  	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
-  })
+ // app.get("/frontpage", function(req, res) {
+  	//res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
+  //})
 
 //   app.get("/frontpage", function(req, res) {
 //   	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
