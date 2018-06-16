@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Expense.associate = function(models) {
     Expense.belongsTo(models.Category, {
-      foreignKey: "category_id" // we have manually created a column to be set as the foreign key
+      foreignKey: "category_id", as: 'Category' // we have manually created a column to be set as the foreign key
     });
     Expense.belongsTo(models.User, {
       foreignKey: "user_id" // we have manually created a column to be set as the foreign key
