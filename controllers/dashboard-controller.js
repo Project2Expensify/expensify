@@ -53,10 +53,10 @@ exports.createExpense = function(req, res) {
 
 //* KEEP: this is being used to populate expense table on forminput.handlebars. 
 exports.showExpenses = function(req,res){
-  const allExpenses = expenses.findAll();
+  const allExpenses = expenses.findAll({ include: [{ model: categories, as: 'Category'}] });
   const allCategories = categories.findAll();
 
-  console.log(allCategories)
+  // console.log(allCategories)
 
   const promise = Promise.all([allExpenses, allCategories]); // resolve findAll promises at the time
 

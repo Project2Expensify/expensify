@@ -28,13 +28,14 @@ router.post("/categories", function(req, res){ // /api is prefixed in server.js 
 
 router.get("/categories", function(req, res){ // /api is prefixed in server.js file
   category.findOne({ where: { id: req.query.id }}).then(function(cat) {
+    console.log('cat')
     res.send(cat)
   })
 })
 
 // create/send back expense that user created
 router.post("/expenses", function(req, res){ // /api is prefixed in server.js file
-  console.log(req.body)
+  console.log('expense', req.body)
   expense.create(req.body).then(function(exp){
     res.send(exp)
   }).catch(function(err) {

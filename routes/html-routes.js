@@ -85,14 +85,14 @@ router.get("/frontpage", function(req, res) {
 	res.sendFile(path.join(__dirname, "../frontpage.html"))
 });
 
-// If no matching route is found default to home
-router.get("*", function(req, res) {
-	//res.sendFile(path.join(__dirname, "../loginbudget.html"));
-	var hbsObject = {	 
-	};
+// // If no matching route is found default to home
+// router.get("*", function(req, res) {
+// 	//res.sendFile(path.join(__dirname, "../loginbudget.html"));
+// 	var hbsObject = {	 
+// 	};
 
-	res.render("../views/loginbudget", hbsObject);
-});
+// 	res.render("../views/loginbudget", hbsObject);
+// });
 
 
 module.exports = router;

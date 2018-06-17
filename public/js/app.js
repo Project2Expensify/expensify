@@ -16,10 +16,11 @@ $(function() {
       }
     }).done(function(data) {
       //redirect to users dashboard
+      console.log(data)
       if (data.user) {
         window.location.href = "dashboard?user_id=" + data.user.id;
       } else {
-        //alert("User not found");
+        alert("User not found");
       }
     });
   });
@@ -107,6 +108,7 @@ $(function() {
     });
 
     $.when( categoryPromise, expensePromise ).then( function( categoryResponse, expenseResponse ) {
+      console.log(categoryResponse)
       $("#tableBody").append("<tr><td>" + expenseResponse[0].date + "</td><td>" + expenseResponse[0].description + "</td><td>" + categoryResponse[0].name + "</td><td>"  + expenseResponse[0].amount);
 
       dateInput.val("");
