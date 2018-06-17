@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Expensify</title>
+
+  <!-- Links -->
   <link rel="stylesheet" href="/public/css/dashboard.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
@@ -14,7 +16,11 @@
   <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
   <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
     ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+  <!-- CSS Link -->
+  <link rel = 'stylesheet' href = "public/assets/html.css">
+  
+
 </head>
 
 <body>
@@ -29,7 +35,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Expensify</a>
+        <a class="navbar-brand" href="frontpage.html">Expensify</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -41,7 +47,8 @@
             <span class="glyphicons glyphicons-calendar"></span>
           </li>
           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+             <!-- Added Link to sign in page -->
+              <a href="sign-in.html" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
           <ul id="login-dp" class="dropdown-menu">
             <li>
                <div class="row">
@@ -86,9 +93,13 @@
   </nav>
 
   <div class="jumbotron">
-    <h1>Balance</h1>
+    <center>
+    <h1 class="display-4">Balance</h1>
+    <p class="lead"></p>
+    <hr class="my-4">
     <p>...</p>
-    <h1>Up to Date Spending</h1>
+    <h3>Up to Date Spending</h3>
+  </center>
   </div>
 
   <div id='pie-chart' style="overflow: visible"></div>
