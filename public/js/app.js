@@ -16,10 +16,11 @@ $(function() {
       }
     }).done(function(data) {
       //redirect to users dashboard
+      console.log(data)
       if (data.user) {
         window.location.href = "dashboard?user_id=" + data.user.id;
       } else {
-        //alert("User not found");
+        alert("User not found");
       }
     });
   });
@@ -54,18 +55,18 @@ $(function() {
       }
   })
 
-    }).done(function(data) {
-      //redirect to users dashboard
-      var user = data.user;
-      var userId = user.id;
+    // }).done(function(data) {
+    //   //redirect to users dashboard
+    //   var user = data.user;
+    //   var userId = user.id;
 
-      console.log(data);
-      //   $.ajax({
-      //     url: /dashboard,
-      //     method: 'GET',
-      //     data: {}
-      // })
-    });
+    //   console.log(data);
+    //   //   $.ajax({
+    //   //     url: /dashboard,
+    //   //     method: 'GET',
+    //   //     data: {}
+    //   // })
+    // });
   });
 
   $("#submitExpense").on("click", function(event) {
@@ -107,6 +108,7 @@ $(function() {
     });
 
     $.when( categoryPromise, expensePromise ).then( function( categoryResponse, expenseResponse ) {
+      console.log(categoryResponse)
       $("#tableBody").append("<tr><td>" + expenseResponse[0].date + "</td><td>" + expenseResponse[0].description + "</td><td>" + categoryResponse[0].name + "</td><td>"  + expenseResponse[0].amount);
 
       dateInput.val("");
@@ -135,8 +137,4 @@ $(function() {
     //   $("#tableBody").append("<tr><td>" + data.date + "</td><td>" + data.description + "</td><td>" + data.category + "</td><td>"  + data.amount);
     // });
   });
-
-
-
-
-
+});

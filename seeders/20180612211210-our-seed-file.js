@@ -13,13 +13,11 @@ module.exports = {
       }], {});
     */
       return queryInterface.bulkInsert('Categories', [
-        { name: 'Groceries', createdAt: new Date(), updatedAt: new Date() },
-        { name: 'Gas', createdAt: new Date(), updatedAt: new Date() },
+        { name: 'Food', createdAt: new Date(), updatedAt: new Date() },
+        { name: 'Bills', createdAt: new Date(), updatedAt: new Date() },
         { name: 'Retail', createdAt: new Date(), updatedAt: new Date() },
-        { name: 'Dining Out', createdAt: new Date(), updatedAt: new Date() },
+        { name: 'Travel', createdAt: new Date(), updatedAt: new Date() },
         { name: 'Miscellaneous', createdAt: new Date(), updatedAt: new Date() },
-        { name: 'Rent', createdAt: new Date(), updatedAt: new Date() },
-        { name: 'Gifts', createdAt: new Date(), updatedAt: new Date() },
       ], {});
    
     
@@ -35,13 +33,11 @@ module.exports = {
     */
 
     return queryInterface.bulkDelete('Categories', [
-      { name: 'Groceries' },
-      { name: 'Gas' },
+      { name: 'Food' },
+      { name: 'Bills' },
       { name: 'Retail' },
-      { name: 'Dining Out' },
+      { name: 'Travel' },
       { name: 'Miscellaneous' },
-      { name: 'Rent' },
-      { name: 'Gifts' },
     ], {})
   }
 };

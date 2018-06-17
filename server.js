@@ -27,9 +27,19 @@ app.set("view engine", "handlebars");
 app.use("/", htmlRoutes);
 app.use("/api", apiRoutes);
 
+
+// If no matching route is found default to home
+app.get("*", function(req, res) {
+	//res.sendFile(path.join(__dirname, "../loginbudget.html"));
+	var hbsObject = {	 
+	};
+
+	res.render("../views/loginbudget", hbsObject);
+});
+
 const PORT = process.env.PORT || 8080;
 
-db.sequelize.sync({force: false}).then(function(){
+db.sequelize.sync({force: true}).then(function(){
   app.listen(PORT, function() {
     console.log(`Listening on port: ${PORT}`);
   })
