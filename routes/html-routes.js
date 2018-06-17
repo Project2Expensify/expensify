@@ -9,7 +9,7 @@ router.post("/signin", userController.signIn);
 router.get("/dashboard", dashboardContoller.userDashboard);
 
 // router.get("/dashboard", dashboardContoller.showExpenses);
-router.get("/forminput", dashboardContoller.showForm);
+// router.get("/forminput", dashboardContoller.showForm);
 
 router.get("/dashboard/:username", dashboardContoller.userDashboard);
 router.get("/forminput", dashboardContoller.showExpenses);
@@ -20,7 +20,7 @@ router.get("/forminput", dashboardContoller.showExpenses);
 // DEPENDENCIES
 // We need to include the path package to get the correct file path for our html
 // ===============================================================================
-// var path = require("path");
+var path = require("path");
 
 
 // ===============================================================================
@@ -43,9 +43,9 @@ router.get("/forminput", dashboardContoller.showExpenses);
 //   });
 
 
-  app.get("/frontpage", function(req, res) {
-  	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
-  })
+//   app.get("/frontpage", function(req, res) {
+//   	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
+//   })
 
 //   app.get("/frontpage", function(req, res) {
 //   	res.sendFile(path.join(__dirname, "../expensify/frontpage.html"))
@@ -59,40 +59,40 @@ router.get("/forminput", dashboardContoller.showExpenses);
 // };
 
 // This one creates a user
-// router.get("/createuser", function(req, res) {
-// 	var hbsObject = {
-// 		login: false
-// 	};
-// 	res.render("../views/loginbudget", hbsObject);
-// });
+router.get("/createuser", function(req, res) {
+	var hbsObject = {
+		login: false
+	};
+	res.render("../views/loginbudget", hbsObject);
+});
 
-// router.get("/loginuser", function(req, res) {
-// 	var hbsObject = {
-// 		login: true
-// 	};
-// 	res.render("../views/loginbudget", hbsObject);
-// });
+router.get("/loginuser", function(req, res) {
+	var hbsObject = {
+		login: true
+	};
+	res.render("../views/loginbudget", hbsObject);
+});
 
 // router.get("/forminput", function(req, res) {
 // 	res.sendFile(path.join(__dirname, "../forminput.html"));
 // });
 
-// router.get("/", function(req, res) {
-// 	res.sendFile(path.join(__dirname, "../frontpage.html"))
-// });
+router.get("/", function(req, res) {
+	res.sendFile(path.join(__dirname, "../frontpage.html"))
+});
 
-// router.get("/frontpage", function(req, res) {
-// 	res.sendFile(path.join(__dirname, "../frontpage.html"))
-// });
+router.get("/frontpage", function(req, res) {
+	res.sendFile(path.join(__dirname, "../frontpage.html"))
+});
 
-// // If no matching route is found default to home
-// router.get("*", function(req, res) {
-// 	//res.sendFile(path.join(__dirname, "../loginbudget.html"));
-// 	var hbsObject = {	 
-// 	};
+// If no matching route is found default to home
+router.get("*", function(req, res) {
+	//res.sendFile(path.join(__dirname, "../loginbudget.html"));
+	var hbsObject = {	 
+	};
 
-// 	res.render("../views/loginbudget", hbsObject);
-// });
+	res.render("../views/loginbudget", hbsObject);
+});
 
 
 module.exports = router;

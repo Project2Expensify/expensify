@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       references: {
         model: "Users",
-        key: "id"
+        key: "id",
       }
     },
     amount: {
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "category_id", as: 'Category' // we have manually created a column to be set as the foreign key
     });
     Expense.belongsTo(models.User, {
-      foreignKey: "user_id" // we have manually created a column to be set as the foreign key
+      foreignKey: "user_id", // we have manually created a column to be set as the foreign key
     })
   };
   return Expense;

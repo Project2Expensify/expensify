@@ -54,18 +54,18 @@ $(function() {
       }
   })
 
-    }).done(function(data) {
-      //redirect to users dashboard
-      var user = data.user;
-      var userId = user.id;
+    // }).done(function(data) {
+    //   //redirect to users dashboard
+    //   var user = data.user;
+    //   var userId = user.id;
 
-      console.log(data);
-      //   $.ajax({
-      //     url: /dashboard,
-      //     method: 'GET',
-      //     data: {}
-      // })
-    });
+    //   console.log(data);
+    //   //   $.ajax({
+    //   //     url: /dashboard,
+    //   //     method: 'GET',
+    //   //     data: {}
+    //   // })
+    // });
   });
 
   $("#submitExpense").on("click", function(event) {
@@ -135,8 +135,4 @@ $(function() {
     //   $("#tableBody").append("<tr><td>" + data.date + "</td><td>" + data.description + "</td><td>" + data.category + "</td><td>"  + data.amount);
     // });
   });
-
-
-
-
-
+});
