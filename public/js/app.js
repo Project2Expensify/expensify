@@ -90,13 +90,13 @@ $(function() {
 
     // we first store ajax calls in variables
     const categoryPromise =  $.ajax({
-      url: "http://localhost:8080/api/categories/?id=" + category_id,
+      url: "/api/categories/?id=" + category_id,
       method: "GET",
       
     });
 
     const expensePromise = $.ajax({
-      url: "http://localhost:8080/api/expenses/",
+      url: "/api/expenses/",
       method: "POST",
       data: {
         description: description,
@@ -120,7 +120,7 @@ $(function() {
 
     // //send form data
     // $.ajax({
-    //   url: "http://localhost:8080/api/expenses/",
+    //   url: "/api/expenses/",
     //   method: "POST",
     //   data: {
     //     description: description,
