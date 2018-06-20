@@ -6,23 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Expensify</title>
-  <link rel="stylesheet" href="/public/css/dashboard.css">
+  <!-- <link rel="stylesheet" href="/public/css/dashboard.css"> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
     crossorigin="anonymous">
-  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
-  <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+    <link rel="stylesheet" href="">
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
@@ -31,7 +28,7 @@
         </button>
         <a class="navbar-brand" href="#">Expensify</a>
       </div>
-
+      
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav"></ul>
@@ -41,99 +38,62 @@
             <span class="glyphicons glyphicons-calendar"></span>
           </li>
           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
-          <ul id="login-dp" class="dropdown-menu">
-            <li>
-               <div class="row">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+            <ul id="login-dp" class="dropdown-menu">
+              <li>
+                <div class="row">
                   <div class="col-md-12">
                     Login via
                     <div class="social-buttons">
                       <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
                       <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
                     </div>
-                                    or
-                     <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                        <div class="form-group">
-                           <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                           <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                        </div>
-                        <div class="form-group">
-                           <label class="sr-only" for="exampleInputPassword2">Password</label>
-                           <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                 <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                        </div>
-                        <div class="form-group">
-                           <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                        </div>
-                        <div class="checkbox">
-                           <label>
-                           <input type="checkbox"> keep me logged-in
-                           </label>
-                        </div>
-                     </form>
+                    or
+                    <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="exampleInputPassword2">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                        <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                      </div>
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> keep me logged-in
+                        </label>
+                      </div>
+                    </form>
                   </div>
                   <div class="bottom text-center">
                     New here ? <a href="#"><b>Join Us</b></a>
                   </div>
-               </div>
-            </li>
-          </ul>
-            </li>        </ul>
+                </div>
+              </li>
+            </ul>
+          </li>        </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.navbar-collapse -->
+      <!-- /.container-fluid -->
+    </nav>
+    
+    <div class="jumbotron">
+      <h1>Balance</h1>
+      <p>...</p>
+      <h1>Up to Date Spending</h1>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
-
-  <div class="jumbotron">
-    <h1>Balance</h1>
-    <p>...</p>
-    <h1>Up to Date Spending</h1>
-  </div>
-
-  <div id='pie-chart' style="overflow: visible"></div>
-  <div id="line-graph" style="overflow: visible"></div>
-
-  <script>
-    var myConfig = {
-      "type": "pie",
-      "title": {
-        "text": "Pie Chart"
-      },
-      "series": [
-        { "values": [59] },
-        { "values": [55] },
-        { "values": [30] },
-        { "values": [28] },
-        { "values": [15] }
-      ]
-    };
-
-    zingchart.render({
-      id: 'pie-chart',
-      data: myConfig,
-      height: 400,
-      width: "100%"
-    });
-
-    var myConfig2 = {
-      "type": "line",
-      "series": [
-        { "values": [20, 40, 25, 50, 15, 45, 33, 34] },
-        { "values": [5, 30, 21, 18, 59, 50, 28, 33] },
-        { "values": [30, 5, 18, 21, 33, 41, 29, 15] }
-      ]
-    };
-
-    zingchart.render({
-      id: 'line-graph',
-      data: myConfig2,
-      height: "100%",
-      width: "100%"
-    });
-  </script>
-
-
-</body>
-
-</html>
+    
+    <div id='charts'>
+      <canvas id="pie-chart"></canvas>
+    </div>
+    
+  </body>
+  <script src="public/js/dashboard.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  
+  </html>
