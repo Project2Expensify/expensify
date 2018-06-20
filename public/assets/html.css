@@ -94,8 +94,55 @@ body, {
   background: -moz-linear-gradient(right, lightskyblue, lightblue);
   background: -o-linear-gradient(right, lightskyblue, lightblue);
   background: linear-gradient(to left, lightskyblue, lightblue);
-
+  
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
+
+.display-4 {
+  font-family: 'Source Code Pro', monospace;
+  
+  
+}
+    #title-image {
+    background: url(https://i.ytimg.com/vi/PZGBwd81Gqw/maxresdefault.jpg);
+height: 700px;
+width:1024px;
+margin-right: 0px;
+margin-left: 0px;
+position: relative;
+display: block;
+    }
+
+    #main-container {
+      margin-right: 0px;
+      float: left;
+    }
+
+    #inner-image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #front-page-body {
+      background-color: lightblue;
+    }
+
+    #screenshot1 {
+      width: 500px;
+      height: 500px;
+    }
+
+    #screenshot2 {
+      width: 500px;
+      height: 500px;
+    }
+
+    #inner-image-text {
+      margin-bottom: 20px;
+      bottom: 8px;
+    }
+
